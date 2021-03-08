@@ -19,7 +19,7 @@ BISC can take gene expression read count data, to minimize unwanted heterogeneit
 
 ## Install BISC
 ```r
-install_github("adamluo12/BISC/BISC")
+install_github("thecailab/BISC/BISC")
 ```
 ## Running BISC
 BISC takes the read count input values.
