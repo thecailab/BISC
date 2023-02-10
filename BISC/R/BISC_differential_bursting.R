@@ -23,7 +23,7 @@ DB=function(data1,data2,frequency,size,log2){
     sizedif=log2(test1[,(2*N+1):3*N]/test1[,(N+1):2*N]/(test2[,(2*N+1):3*N])/test2[,(N+1):2*N])
   }else{
     kondif=test1[,1:N]-test2[,1:N]
-    sizedif=test1[,(2*N+1):3*N]/test1[,(N+1):2*N]-(test2[,(2*N+1):3*N])/test2[,(N+1):2*N])
+    sizedif=test1[,(2*N+1):3*N]/test1[,(N+1):2*N]-test2[,(2*N+1):3*N]/test2[,(N+1):2*N]
 
   }
 
