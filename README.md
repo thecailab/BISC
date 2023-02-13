@@ -107,7 +107,7 @@ library(edgeR)
 > plotSmear(test1,de.tags = genetags,main="DB frequency Group A vs. B")
 > dev.off()
 ```
-![MA plot,width="500"](MA.jpg)
+![MA plot](MA.jpg)
 ```r
 ## Volcano plot
 > volcano_plot("volcano_plot_DB frequency Group A vs. B.pdf",comparison = test1,name = "DB frequency Group A vs. B")
