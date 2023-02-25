@@ -115,3 +115,5 @@ library(edgeR)
 ```
 ![Volcano plot](volcano.jpg)
 
+### Citation
+Luo, Xizhi, Fei Qin, Feifei Xiao, and Guoshuai Cai. "BISC: accurate inference of transcriptional bursting kinetics from single-cell transcriptomic data." Briefings in Bioinformatics 23, no. 6 (2022).
