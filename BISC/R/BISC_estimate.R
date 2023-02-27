@@ -43,13 +43,13 @@ BISC_estimate=function(data,model="PB-trend",iter=4000){
     fit=rstan::sampling(BISC:::stanmodels$bhm1,data=list(N=N,K=K,y=count,l=as.numeric(lib.size),bcv=bcv),chains=1,iter =iter,control = list(adapt_delta = 0.99),  pars=c("kon","koff","s"),save_warmup=FALSE)
   }
   if(model=="ZIPB-trend"){
-    fit=rstan::sampling(BISC:::stanmodels$bhm2,data=list(N=N,K=K,y=count,l=as.numeric(lib.size),bcv,tau=drop.tau,x0=drop.x0),chains=1,iter =iter,control = list(adapt_delta = 0.99),  pars=c("kon","koff","p","s"),save_warmup=FALSE)
+    fit=rstan::sampling(BISC:::stanmodels$bhm2,data=list(N=N,K=K,y=count,l=as.numeric(lib.size),bcv,tau=drop.tau,x0=drop.x0),chains=1,iter =iter,control = list(adapt_delta = 0.99),  pars=c("kon","koff","s"),save_warmup=FALSE)
   }
   result=data.matrix(fit)
   final=final=apply(result,2,mean)
   kon_est=final[1:N]
-  koff_est=final[(N+1):2*N]
-  s_est=final[(2*N+1):3*N]
+  koff_est=final[(N+1):(2*N)]
+  s_est=final[(2*N+1):(3*N)]
   genes=rownames(count)
   estimation=data.frame(genes,kon_est,koff_est,s_est)
   colnames(estimation)=c("Gene","kon","koff","s")
