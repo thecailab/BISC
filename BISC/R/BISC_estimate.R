@@ -25,7 +25,7 @@ BISC_estimate=function(data,model="PB-trend",iter=4000){
   drop.tau=getParam(splat,"dropout.shape")
   disps <- edgeR::estimateDisp(count)
   logcpm=edgeR::aveLogCPM(count)
-  data_gam=data.frame(logcpm,disps)
+  data_gam=data.frame(logcpm,disps=disps$tagwise.dispersion)
   formula <- gam(disps~s(logcpm),data=data_gam)
   bcv=matrix(rep(1,ncol(count)*nrow(count)),ncol=ncol(count))
   for (c in 1:ncol(count)) {
