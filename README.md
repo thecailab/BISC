@@ -12,6 +12,24 @@ library(rstan)
 library(mgcv)
 library(edgeR)
 library(splatter)
+> sessionInfo()
+R version 4.1.1 (2021-08-10)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19044)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.1252  LC_CTYPE=English_United States.1252    LC_MONETARY=English_United States.1252 LC_NUMERIC=C                           LC_TIME=English_United States.1252    
+
+attached base packages:
+[1] stats4    stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] splatter_1.18.2             SingleCellExperiment_1.16.0 SummarizedExperiment_1.24.0 Biobase_2.54.0              GenomicRanges_1.46.1        GenomeInfoDb_1.30.1        
+ [7] IRanges_2.28.0              S4Vectors_0.32.4            BiocGenerics_0.40.0         MatrixGenerics_1.6.0        matrixStats_0.62.0          edgeR_3.36.0               
+[13] limma_3.50.3                mgcv_1.8-36                 nlme_3.1-152                rstan_2.26.11               StanHeaders_2.26.11         BISC_0.0.0.9000            
+[19] devtools_2.4.3              usethis_2.1.6  
 ```
 
 ## Running BISC
